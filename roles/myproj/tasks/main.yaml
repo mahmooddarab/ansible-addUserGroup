@@ -1,0 +1,12 @@
+- name:  -----group mod -----
+  group:
+    name: testgroup
+    state: present
+  tags: add_group
+- name: ------user mod------------
+  user:
+    name: devops
+    group: testgroup
+    shell: /bin/bash
+    state: present
+  tags: add_user
